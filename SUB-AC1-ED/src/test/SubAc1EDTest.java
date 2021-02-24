@@ -12,12 +12,12 @@ class SubAc1EDTest {
 
 	/*
 	* = Casos de teste para passar:
-	* 1.recursiveFactorial OK
-	* 2.LinearSum OK
+	* 1.recursiveFactorial OK!
+	* 2.LinearSum OK!
 	* 3.ReverseArray
 	* 4.IterativeReverseArray
-	* 5.BinarySum
-	* 6.BinaryFib
+	* 5.BinarySum FALHA!
+	* 6.BinaryFib OK!
 	* 7.LinearFibonacci
 	*/
 	
@@ -25,14 +25,16 @@ class SubAc1EDTest {
 	void testFatorial() {
 		// Testa função Fatorial com recursividade 
 		assertEquals(3628800, rc.recursiveFactorial(10));
-	}
+	}	//-----------------OK!
+	
 	
 	@Test
 	void testSomaLinear() {
 		int n = a.length;
 		// Testa função de Soma Linear
 		assertEquals(7540, rc.LinearSum(a, n));
-	}
+	}	//-----------------OK!
+	
 	
 	@Test
 	void testSomaBinaria() {
@@ -40,12 +42,22 @@ class SubAc1EDTest {
 		int n = a.length;
 		// Testa função de Soma Binaria
 		assertEquals(7540, rc.BinarySum(a, i, n));
-	}   //-----------------RESOLVR FALHA!
+	}   //-----------------RESOLVER FALHA!
 
+	
 	@Test
-	void testSeqFib() {
+	void testBynSeqFib() {
 		int k = 8;
 		// Testa função de Sequencia Fibonacci
 		assertEquals(21, rc.BinaryFib(k));
-	}   
+	}	//-----------------OK!
+	
+	
+	@Test
+	void testLinSeqFib() {
+		int k = 5;
+		int[] fb_res = {3,2};
+		// Testa função de Sequencia Fibonacci Linear
+		assertEquals(fb_res, rc.LinearFibonacci(k));
+	}	//-----------------RESOLVR FALHA!
 }

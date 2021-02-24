@@ -29,7 +29,7 @@ public class SubAc1ED {
 			return a[i];
 		} else {
 			return BinarySum(a, i, (n/2)) + BinarySum(a, i+(n/2), (n/2));
-		}//-----------------RESOLVR FALHA!
+		}//-----------------RESOLVER FALHA!
 	}
 
 
@@ -41,6 +41,21 @@ public class SubAc1ED {
 			return BinaryFib(k-1) + BinaryFib(k-2);
 		}//-----------------OK!
 			
+	}
+
+
+	public int[] LinearFibonacci(int k) {		
+		// Função de Sequencia Fibonacci Linear
+		if (k <= 1) {
+			return new int[] {k, 0};
+		} else {
+			int r[] = LinearFibonacci(k-1);
+			int i = r[0];
+			int j = r[1];
+			System.out.print(new int[] {(i + j), i});
+		return new int[] {(i + j), i} ;
+		}//-----------------RESOLVR FALHA!
+		
 	}
 
 	
