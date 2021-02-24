@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import metodos.SubAc1ED;
 
-class SubAC1Test {
+class SubAc1EDTest {
 	SubAc1ED rc = new SubAc1ED();
 	int[] a = {940, 880, 830, 790, 750, 660, 650, 590, 510, 940};
 
@@ -33,7 +33,19 @@ class SubAC1Test {
 		// Testa função de Soma Linear
 		assertEquals(7540, rc.LinearSum(a, n));
 	}
+	
+	@Test
+	void testSomaBinaria() {
+		int i = 0;
+		int n = a.length;
+		// Testa função de Soma Binaria
+		assertEquals(7540, rc.BinarySum(a, i, n));
+	}   //-----------------RESOLVR FALHA!
 
-
-
+	@Test
+	void testSeqFib() {
+		int k = 8;
+		// Testa função de Sequencia Fibonacci
+		assertEquals(21, rc.BinaryFib(k));
+	}   
 }
