@@ -47,16 +47,32 @@ public class SubAc1ED {
 	public int[] LinearFibonacci(int k) {		
 		// Função de Sequencia Fibonacci Linear
 		if (k <= 1) {
-			return new int[] {k, 0};
+			int f[] = {k,0};
+			return f;
 		} else {
+			
 			int r[] = LinearFibonacci(k-1);
 			int i = r[0];
 			int j = r[1];
-			System.out.print(new int[] {(i + j), i});
-		return new int[] {(i + j), i} ;
-		}//-----------------RESOLVR FALHA!
+			System.out.println("antes "+i+" "+j);
+			
+			
+			if(i+j == k) {
+				int f[] = {i,j};
+				return f; 
+			}
+			
+			else {
+				System.out.println((i+j)+" "+j);
+				int f[] = {i+j,i};
+				return f ;
+			}
+			
+		
+		}
 		
 	}
 
+	
 	
 }

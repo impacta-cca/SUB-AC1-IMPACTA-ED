@@ -56,8 +56,15 @@ class SubAc1EDTest {
 	@Test
 	void testLinSeqFib() {
 		int k = 5;
-		int[] fb_res = {3,2};
+		int fb_res[] = {3,2};
+		int resul[] = rc.LinearFibonacci(k);
+		
 		// Testa função de Sequencia Fibonacci Linear
-		assertEquals(fb_res, rc.LinearFibonacci(k));
-	}	//-----------------RESOLVR FALHA!
+		assertEquals(fb_res[0], resul[0]);
+		assertEquals(fb_res[1], resul[1]);
+		
+		
+	}	
+	
+	
 }
