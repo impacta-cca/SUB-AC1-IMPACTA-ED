@@ -22,32 +22,7 @@ public class SubAc1ED {
 		}//-----------------OK!
 	}
 	
-	public int[] reverte(int[] a, int i, int j) {
-		if (i < j) {
-			troca(a, i, j);
-			reverte(a, i + 1, j -1);
-			
-		}
-		return a; 
-	}
-		
-	private void troca(int[] a, int i, int j) {
-		int aux = a[i];
-		a[i] = a[j];
-		a[j] = aux; 
-		
-	}
 	
-	public int[] IterativeReverseArray(int[] a, int i, int j) {
-		while (i<j) {
-			troca(a, i, j);
-			i += 1;
-			j -= 1;
-		}
-		return a;
-	}
-
-
 	public Integer BinarySum(int[] a, int i, int n) {
 		// Função de Soma Binaria
 		if (n == 1) {
@@ -56,6 +31,31 @@ public class SubAc1ED {
 			return BinarySum(a, i, (n/2)) + BinarySum(a, i+(n/2), (n/2));
 		}//-----------------RESOLVER FALHA!
 	}
+	
+	public int[] ReverseArray(int[] a, int i, int j) {
+		// Função de Array Reversa
+		if (i < j) {
+			troca(a, i, j);
+			ReverseArray(a, i + 1, j -1);	
+		}
+		return a; 
+	}//-----------------OK!
+		
+	private void troca(int[] a, int i, int j) {
+		int aux = a[i];
+		a[i] = a[j];
+		a[j] = aux; 
+		}//-----------------OK! (Parte do ReverseArray)
+	
+	public int[] IterativeReverseArray(int[] a, int i, int j) {
+		// Função de Array Reversa Iterativa
+		while (i<j) {
+			troca(a, i, j);
+			i += 1;
+			j -= 1;
+		}
+		return a;
+	}//-----------------OK!
 
 
 	public Integer BinaryFib(int k) {
@@ -75,29 +75,16 @@ public class SubAc1ED {
 			int f[] = {k,0};
 			return f;
 		} else {
-			
 			int r[] = LinearFibonacci(k-1);
 			int i = r[0];
 			int j = r[1];
-			System.out.println("antes "+i+" "+j);
-			
-			
 			if(i+j == k) {
 				int f[] = {i,j};
-				return f; 
-			}
-			
-			else {
-				System.out.println((i+j)+" "+j);
+				return f;
+			}else {
 				int f[] = {i+j,i};
-				return f ;
+				return f;
 			}
-			
-		
 		}
-		
 	}
-
-	
-	
 }

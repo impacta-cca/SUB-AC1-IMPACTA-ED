@@ -18,11 +18,11 @@ class SubAc1EDTest {
 	* = Casos de teste para passar:
 	* 1.recursiveFactorial OK!
 	* 2.LinearSum OK!
-	* 3.ReverseArray
-	* 4.IterativeReverseArray
+	* 3.ReverseArray OK!
+	* 4.IterativeReverseArray Ok!
 	* 5.BinarySum FALHA!
 	* 6.BinaryFib OK!
-	* 7.LinearFibonacci
+	* 7.LinearFibonacci Ok!
 	*/
 	
 	@Test
@@ -39,22 +39,6 @@ class SubAc1EDTest {
 		assertEquals(7540, rc.LinearSum(a, n));
 	}	//-----------------OK!
 	
-	@Test
-	void testArrayReversa() {
-		// Testa função de Array Reversa
-		assertEquals(
-                Arrays.toString(rc.reverte(a, 0, a.length-1)),
-                Arrays.toString(new int[] {940, 510, 590, 650, 660, 750, 790, 830, 880, 940}));
-	}
-	
-	
-	@Test
-	void testArrayReversaIterativa() {
-		// Testa função de Array Reversa Iterativa
-		assertEquals(
-                Arrays.toString(rc.IterativeReverseArray(a, 0, a.length-1)),
-                Arrays.toString(new int[] {940, 510, 590, 650, 660, 750, 790, 830, 880, 940}));
-	}
 	
 	@Test
 	void testSomaBinaria() {
@@ -64,6 +48,24 @@ class SubAc1EDTest {
 		assertEquals(7540, rc.BinarySum(a, i, n));
 	}   //-----------------RESOLVER FALHA!
 
+		
+	@Test
+	void testArrayReversa() {
+		// Testa função de Array Reversa
+		assertEquals(
+                Arrays.toString(rc.ReverseArray(a, 0, a.length-1)),
+                Arrays.toString(new int[] {940, 510, 590, 650, 660, 750, 790, 830, 880, 940}));
+	}	//-----------------OK!
+	
+	
+	@Test
+	void testArrayReversaIterativa() {
+		// Testa função de Array Reversa Iterativa
+		assertEquals(
+                Arrays.toString(rc.IterativeReverseArray(a, 0, a.length-1)),
+                Arrays.toString(new int[] {940, 510, 590, 650, 660, 750, 790, 830, 880, 940}));
+	}	//-----------------OK!
+	
 	
 	@Test
 	void testBynSeqFib() {
@@ -75,16 +77,13 @@ class SubAc1EDTest {
 	
 	@Test
 	void testLinSeqFib() {
+		// Testa função de Sequencia Fibonacci Linear
 		int k = 5;
 		int fb_res[] = {3,2};
 		int resul[] = rc.LinearFibonacci(k);
-		
-		// Testa função de Sequencia Fibonacci Linear
 		assertEquals(fb_res[0], resul[0]);
 		assertEquals(fb_res[1], resul[1]);
-		
-		
-	}	
+	}	//-----------------OK!
 	
 	
 }
