@@ -35,6 +35,22 @@ class SubAc1EDTest {
 		assertEquals(7540, rc.LinearSum(a, n));
 	}	//-----------------OK!
 	
+	@Test
+	void testArrayReversa() {
+		// Testa função de Array Reversa
+		Assert.assertEquals(
+                Arrays.toString(rc.reverte(a, 0, a.length-1)),
+                Arrays.toString(new int[] {940, 510, 590, 650, 660, 750, 790, 830, 880, 940}));
+	}
+	
+	
+	@Test
+	void testArrayReversaIterativa() {
+		// Testa função de Array Reversa Iterativa
+		Assert.assertEquals(
+                Arrays.toString(rc.IterativeReverseArray(a, 0, a.length-1)),
+                Arrays.toString(new int[] {940, 510, 590, 650, 660, 750, 790, 830, 880, 940}));
+	}
 	
 	@Test
 	void testSomaBinaria() {

@@ -21,6 +21,31 @@ public class SubAc1ED {
 			return LinearSum(a, n-1) + a[n-1];
 		}//-----------------OK!
 	}
+	
+	public int[] reverte(int[] a, int i, int j) {
+		if (i < j) {
+			troca(a, i, j);
+			reverte(a, i + 1, j -1);
+			
+		}
+		return a; 
+	}
+		
+	private void troca(int[] a, int i, int j) {
+		int aux = a[i];
+		a[i] = a[j];
+		a[j] = aux; 
+		
+	}
+	
+	public int[] IterativeReverseArray(int[] a, int i, int j) {
+		while (i<j) {
+			troca(a, i, j);
+			i += 1;
+			j -= 1;
+		}
+		return a;
+	}
 
 
 	public Integer BinarySum(int[] a, int i, int n) {
