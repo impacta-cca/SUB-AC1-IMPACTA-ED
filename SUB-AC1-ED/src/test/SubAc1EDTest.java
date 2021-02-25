@@ -2,7 +2,11 @@ package test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.Arrays;
+
 import org.junit.jupiter.api.Test;
+
+
 
 import metodos.SubAc1ED;
 
@@ -38,7 +42,7 @@ class SubAc1EDTest {
 	@Test
 	void testArrayReversa() {
 		// Testa função de Array Reversa
-		Assert.assertEquals(
+		assertEquals(
                 Arrays.toString(rc.reverte(a, 0, a.length-1)),
                 Arrays.toString(new int[] {940, 510, 590, 650, 660, 750, 790, 830, 880, 940}));
 	}
@@ -47,7 +51,7 @@ class SubAc1EDTest {
 	@Test
 	void testArrayReversaIterativa() {
 		// Testa função de Array Reversa Iterativa
-		Assert.assertEquals(
+		assertEquals(
                 Arrays.toString(rc.IterativeReverseArray(a, 0, a.length-1)),
                 Arrays.toString(new int[] {940, 510, 590, 650, 660, 750, 790, 830, 880, 940}));
 	}
