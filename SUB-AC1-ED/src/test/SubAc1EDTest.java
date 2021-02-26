@@ -53,8 +53,8 @@ class SubAc1EDTest {
 	void testArrayReversa() {
 		// Testa função de Array Reversa
 		assertEquals(
-                Arrays.toString(rc.ReverseArray(a, 0, a.length-1)),
-                Arrays.toString(new int[] {940, 510, 590, 650, 660, 750, 790, 830, 880, 940}));
+                Arrays.toString(new int[] {940, 510, 590, 650, 660, 750, 790, 830, 880, 940}),
+		Arrays.toString(rc.ReverseArray(a, 0, a.length-1)));
 	}	//-----------------OK!
 	
 	
@@ -62,8 +62,8 @@ class SubAc1EDTest {
 	void testArrayReversaIterativa() {
 		// Testa função de Array Reversa Iterativa
 		assertEquals(
-                Arrays.toString(rc.IterativeReverseArray(a, 0, a.length-1)),
-                Arrays.toString(new int[] {940, 510, 590, 650, 660, 750, 790, 830, 880, 940}));
+                Arrays.toString(new int[] {940, 510, 590, 650, 660, 750, 790, 830, 880, 940}),
+		Arrays.toString(rc.IterativeReverseArray(a, 0, a.length-1)));
 	}	//-----------------OK!
 	
 	
