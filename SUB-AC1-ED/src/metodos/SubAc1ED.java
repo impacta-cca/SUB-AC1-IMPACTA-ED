@@ -28,9 +28,14 @@ public class SubAc1ED {
 		if (n == 1) {
 			return a[i];
 		} else {
+			if (n%2 == 1) {
+				n = n-1;
+				return BinarySum(a, i, (n/2)) + BinarySum(a, i+(n/2), (n/2)) + a[n+i];
+			}
 			return BinarySum(a, i, (n/2)) + BinarySum(a, i+(n/2), (n/2));
-		}//-----------------RESOLVER FALHA!
+		}//-----------------OK!
 	}
+	
 	
 	public int[] ReverseArray(int[] a, int i, int j) {
 		// Função de Array Reversa

@@ -46,7 +46,7 @@ class SubAc1EDTest {
 		int n = a.length;
 		// Testa função de Soma Binaria
 		assertEquals(7540, rc.BinarySum(a, i, n));
-	}   //-----------------RESOLVER FALHA!
+	}   //-----------------OK!
 
 		
 	@Test
